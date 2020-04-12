@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<properties>
-		<springVersion>5.1.5.RELEASE</springVersion>
+		<springVersion>5.1.13.RELEASE</springVersion>
 		<tilesVersion>3.0.8</tilesVersion>
 	</properties>
 	<build>
