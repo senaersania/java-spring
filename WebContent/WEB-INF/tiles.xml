@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0/EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="layout" template="/WEB-INF/jsp/view_layout.jsp">
+	<!-- <put-attribute name="judul_web"></put-attribute> -->
+	<put-attribute name="body"></put-attribute>
+	</definition>
+	
+	<definition name="view_home" extends="layout">
+	<!-- <put-attribute name="judul_web" value="Homepage"></put-attribute> -->
+	<put-attribute name="body" value="/WEB-INF/jsp/home.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>

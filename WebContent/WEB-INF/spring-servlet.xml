@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+	 	http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+	  	http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd     
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+       
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+        ">
+
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<context:component-scan base-package="com.java"></context:component-scan>
+
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver"> 
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"> 
+		</property> <property name="prefix" value="/WEB-INF/jsp/"></property> <property 
+		name="suffix" value=".jsp"></property> </bean> -->
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.tiles3.TilesView"></property>
+	</bean>
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions" value="/WEB-INF/tiles.xml"></property>
+	</bean>
+
+	<!-- DATABASE -->
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property> 
+		<property name="url" value="jdbc:mysql://localhost:3306/webspring"></property> 
+		<property name="username" value="root"></property> <property name="password" 
+		value=""></property> </bean> -->
+
+	<!-- <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource"></property> <property name="packagesToScan" 
+		value="com.sena.model"></property> <property name="hibernateProperties"> 
+		<props> <prop key="hibernate.dialect"> org.hibernate.dialect.MySQL5Dialect 
+		</prop> <prop key="hibernate.show_sql"> true </prop> </props> </property> 
+		</bean> -->
+
+	<!-- <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager"> 
+		<property name="sessionFactory" ref="sessionFactory"></property> </bean> 
+		<tx:annotation-driven transaction-manager="transactionManager"/> -->
+
+	<!-- security -->
+	<!-- <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean> 
+		<security:http> <security:intercept-url pattern="/list_register" access="hasRole('ROLE_MEMBER')"></security:intercept-url> 
+		<security:form-login login-page="/login" login-processing-url="/proses_login" 
+		username-parameter="email" password-parameter="password"></security:form-login> 
+		<security:logout></security:logout> </security:http> <bean id="loginService" 
+		class="com.sena.service.LoginService"> </bean> <bean id="authProvider" class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"> 
+		<property name="passwordEncoder" ref="encoder"></property> <property name="userDetailsService" 
+		ref="loginService"></property> </bean> -->
+</beans>
