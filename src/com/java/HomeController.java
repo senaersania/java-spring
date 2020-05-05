@@ -24,4 +24,10 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("view_about");
 		return mv;
 	}
+	
+	@RequestMapping(value = "/signin")
+	public ModelAndView signin() {
+		ModelAndView mv = new ModelAndView("view_signin");
+		return mv;
+	}
 }

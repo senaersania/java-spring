@@ -24,4 +24,9 @@
 	<put-attribute name="body" value="/WEB-INF/jsp/checkout.jsp"></put-attribute>
 	</definition>
 	
+	<definition name="view_signin" extends="layout">
+	<!-- <put-attribute name="judul_web" value="Homepage"></put-attribute> -->
+	<put-attribute name="body" value="/WEB-INF/jsp/signin.jsp"></put-attribute>
+	</definition>
+	
 </tiles-definitions>

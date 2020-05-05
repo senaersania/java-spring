@@ -24,18 +24,18 @@
 <body>
 <c:url value="/" var="var1"></c:url>
 <c:url value="/about" var="var2"></c:url>
-<%-- <c:url value="/support" var="var4"></c:url> --%>
-<c:url value="/checkout" var="var4"></c:url>
+<c:url value="/checkout" var="var3"></c:url>
+<c:url value="/signin" var="var4"></c:url>
 
 	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
 	  <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="${var1}">Company name</a></h5>
 	  <nav class="my-2 my-md-0 mr-md-3">
 	    <a class="p-2 text-dark" href="${var1}">Features</a>
 	    <a class="p-2 text-dark" href="${var2}">About</a>
-	    <a class="p-2 text-dark" href="${var3} }">Support</a>
-	    <a class="p-2 text-dark" href="${var4}">Pricing</a>
+	    <a class="p-2 text-dark" href="${var2}">Support</a>
+	    <a class="p-2 text-dark" href="${var3}">Pricing</a>
 	  </nav>
-	  <a class="btn btn-outline-primary" href="#">Sign up</a>
+	  <a class="btn btn-outline-primary" href="${var4}">Sign in</a>
 	</div>
 
 	<tiles:insertAttribute name="body"></tiles:insertAttribute>
