@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<properties>
-		<springVersion>5.1.5.RELEASE</springVersion>
+		<springVersion>5.1.13.RELEASE</springVersion>
 		<tilesVersion>3.0.8</tilesVersion>
 	</properties>
 	<build>
@@ -78,7 +78,24 @@
 			<artifactId>tiles-jsp</artifactId>
 			<version>${tilesVersion}</version>
 		</dependency>
-
+		
+		<!-- Add Bootstrap -->
+		<dependency>
+		 	<groupId>org.webjars</groupId>
+		 	<artifactId>jquery</artifactId>
+		 	<version>3.2.1</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>org.webjars</groupId>
+    		<artifactId>bootstrap</artifactId>
+   	 		<version>4.3.0</version>
+		 </dependency>
+		 <dependency>
+		 	<groupId>org.webjars</groupId>
+		 	<artifactId>font-awesome</artifactId>
+		 	<version>4.7.0</version>
+		 </dependency>
+		
 		<!-- validation -->
 		<!-- <dependency>
 			<groupId>javax.validation</groupId>

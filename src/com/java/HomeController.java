@@ -13,4 +13,15 @@ public class HomeController {
 		return mv;
 	}
 
+	@RequestMapping(value = "/checkout")
+	public ModelAndView checkout() {
+		ModelAndView mv = new ModelAndView("view_checkout");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {
+		ModelAndView mv = new ModelAndView("view_about");
+		return mv;
+	}
 }
